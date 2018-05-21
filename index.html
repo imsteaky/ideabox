@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
+<header>
+  <h1 class='idea-header-text'>idea<span class='box-header-text'>box</span></h1>
+</header>
+
 <body>
-  
+  <section class='form'>
+    <form action='idea-box-form'>
+      <input type='text' placeholder='Title' class='idea-title'>
+      <input type='text' placeholder='Body' class='idea-body'>
+      <button type='submit' class='save-idea-button' disabled>save</button>
+    </form>
+  </section>
+
+  <section class='ideas'>
+    <input type='text' class='search-ideas' placeholder='Search'>
+    <ul class='ideas-main'></ul>
+  </section>
+
+
+
+
+
+  <script type='text/javascript' src='script.js'></script>
+  <script type='text/javascript' src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </body>
+
+</body>
+
 </html>
