@@ -1,78 +1,75 @@
-/* font-family: 'Roboto Slab', serif;
-font-family: 'Open Sans', sans-serif; */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
-header{
-  background-color:#e5f3f2;
+header {
+  background-color:#E5F3F2;
   height: 100%;
   height: 4.5rem;
-
 }
+
 h1 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   margin-top: 20px;
 }
 
-body{
-  text-align: center;
-  font-family: 'Open Sans', sans-serif; 
-  margin: 0;
-
-}
 .idea-header-text {
-  color: #00A79d;
-  margin: 0;
-
+  color: #00A79D;
 }
 
 .box-header-text{
-  color: #6d6e71
+  color: #6D6E71;
 }
 
 .form {
-  background-color: #e5f3f2;
+  background-color: #E5F3F2;
   text-align: center;
+
   margin: 0 auto 20px auto;
+
 }
 
-
-.save-idea-button{
+.save-idea-button {
   padding: 5px 90px;
 }
 
-.form-fields{
-  width: 100%;
+.form-fields {
   height: 50%;
-  text-align: center;
-  padding:20px;
-  
-
-}
-.ideas {
+  padding: 20px;
   width: 100%;
-  justify-content: center;
 }
-.idea-title, .idea-body{
-  width: 70%;
+
+.ideas {
+  justify-content: center;
+  width: 100%;
+}
+
+.idea-title, 
+.idea-body {
   margin: 5px 0;
+  width: 70%;
 }
 
 .save-idea-button{
-  color: #fff;
-  background-color: #00a79d;
+  background-color: #00A79D;
   border: 0;
+  color: #FFF;
+  margin: 5px 0;
   outline: 0;
   width: 70%;
-  margin: 5px 0;
 }
 
 /* BOTTOM HALF*/ 
 
-.ideas{
-  width: calc(70% - 6px);
-  margin-left: auto;
-  margin-right: auto;
+.ideas {
+  width: 70%;
+  margin: 0 auto;
 }
 
-.search-ideas{
+.search-ideas {
   width: 100%;
 }
