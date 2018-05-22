@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,40 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
-    <h1 class="idea-header-text">idea<span class="box-header-text">box</span></h1>
+    <h1 class="idea-header-text">idea<span class="box-header-text">box</span>
+    </h1>
   </header>
-  <section class="form">
+  <section class="input-form-fields">
     <form action="idea-box-form">
       <input type="text" placeholder="Title" class="idea-title">
       <input type="text" placeholder="Body" class="idea-body">
       <button type="submit" class="save-idea-button" disabled>save</button>
     </form>
   </section>
-  <section class="ideas">
+  <section class="bottom-half">
     <input type="text" class="search-ideas" placeholder="Search">
-    <ul class="ideas-main"></ul>
+    <!-- placeholder stuff -->
+    <section class="idea-list">
+      <ul class="ideas-container">
+        <li class="idea-mockup">
+          <h3>Example Idea</h3>
+          <button class="delete-idea-button"></button>
+          <p>Example Idea Body Text</p>
+          <button class="upvote-idea-button"></button>
+          <button class="button downvote-idea-button"></button>
+          <h3 class="id-quality-rating"></h3>
+        </li>
+      </ul>
+      <!-- placeholder stuff -->
+    </section>
   </section>
+
   <script type='text/javascript' src='script.js'></script>
   <script type='text/javascript' src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 </body>
+
 </html>
