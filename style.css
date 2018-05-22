@@ -28,6 +28,9 @@ h1 {
 .form {
   background-color: #E5F3F2;
   text-align: center;
+
+  margin: 0 auto 20px auto;
+
 }
 
 .save-idea-button {
