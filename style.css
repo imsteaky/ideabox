@@ -2,19 +2,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   text-align: center;
+}
+
+p{
+  color: #939598;
 }
 
 header {
   background-color:#E5F3F2;
   height: 100%;
-  height: 4.5rem;
+  padding: 10px 0 0 0;
+  align-content: center;
+  width: 100vw;
 }
 
 h1 {
   font-family: "Roboto Slab", serif;
-  margin-top: 20px;
+  margin: 0;
 }
 
 .idea-header-text {
@@ -25,21 +31,15 @@ h1 {
   color: #6D6E71;
 }
 
-.form {
+.input-form-fields {
   background-color: #E5F3F2;
   text-align: center;
-
-  margin: 0 auto 20px auto;
-
-}
-
-.save-idea-button {
-  padding: 5px 90px;
+  padding-bottom: 40px;
 }
 
 .form-fields {
   height: 50%;
-  padding: 20px;
+  padding: 40px;
   width: 100%;
 }
 
@@ -51,25 +51,65 @@ h1 {
 .idea-title, 
 .idea-body {
   margin: 5px 0;
-  width: 70%;
+  width: 50vw;
+  padding: 10px 0;
 }
 
 .save-idea-button{
   background-color: #00A79D;
   border: 0;
   color: #FFF;
-  margin: 5px 0;
-  outline: 0;
-  width: 70%;
+  height: 30px;
+  width: 50vw;
+  padding: 10px 0;
+}
+.save-idea-button:hover{
+  background-color: #045e55;
+  cursor: pointer;
 }
 
 /* BOTTOM HALF*/ 
 
 .ideas {
-  width: 70%;
+  width: 47vw;
   margin: 0 auto;
+  color: #bebfc1;
 }
 
 .search-ideas {
+  width: 50vw;
+  padding: 2px;
+}
+
+.ideas-container {
+  padding-left: 0;
+  border: 1px solid black;
+  margin: 2rem auto;
+  width: 50vw;
+}
+li{
+  list-style: none;
+  background-color: lightgrey;
+  margin: 0 auto;
   width: 100%;
+  border-bottom: 1px solid #e3e4e5
+}
+
+h3{
+  color: #6D6e71;
+  margin: 0px auto 10px 10px;
+  float: left;
+}
+
+.button {
+  background-repeat: none;
+  background-size: 2.25rem;
+  border: none;
+  height: 2.25rem;
+  top: 6px;
+}
+.delete-idea-button{
+  background-image:url('/icons/downvote.svg');
+  display: inline;
+  margin-right: 0;
 }
