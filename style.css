@@ -43,6 +43,7 @@ form {
   margin: 0 auto;
   max-width: 605px;
 }
+
 form input {
   box-sizing: border-box;
   border: 0.06em solid #d1d2d3;
@@ -75,7 +76,7 @@ form button:hover {
 
 /*------------------BOTTOM HALF------------------*/
 
-section {
+.bottom-half {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -84,7 +85,7 @@ section {
   width: 100%;
 }
 
-section input {
+.bottom-half input {
   border: 1px solid #d1d2d3;
   box-sizing: border-box;
   font-size: 1.5rem;
@@ -112,7 +113,7 @@ ul p {
   display: inline-block;
 }
 
-.bottom-wrapper{
+.bottom-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
