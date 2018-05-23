@@ -1,75 +1,176 @@
 body {
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  text-align: center;
 }
 
-header {
-  background-color:#E5F3F2;
-  height: 100%;
-  height: 4.5rem;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*------------------TITLE SECTION------------------*/
+
+.top-half {
+  align-items: center;
+  background-color: #e5f3f2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
 }
 
 h1 {
+  display: inline-block;
   font-family: "Roboto Slab", serif;
-  margin-top: 20px;
+  font-size: 3.2rem;
+  margin: 0 0 1.5rem 0;
 }
 
 .idea-header-text {
-  color: #00A79D;
+  color: #00a79d;
 }
 
-.box-header-text{
-  color: #6D6E71;
+.box-header-text {
+  color: #6d6e71;
 }
 
-.form {
-  background-color: #E5F3F2;
-  text-align: center;
+/*------------------INPUT FORM------------------*/
 
-  margin: 0 auto 20px auto;
-
-}
-
-.save-idea-button {
-  padding: 5px 90px;
-}
-
-.form-fields {
-  height: 50%;
-  padding: 20px;
-  width: 100%;
-}
-
-.ideas {
-  justify-content: center;
-  width: 100%;
-}
-
-.idea-title, 
-.idea-body {
-  margin: 5px 0;
-  width: 70%;
-}
-
-.save-idea-button{
-  background-color: #00A79D;
-  border: 0;
-  color: #FFF;
-  margin: 5px 0;
-  outline: 0;
-  width: 70%;
-}
-
-/* BOTTOM HALF*/ 
-
-.ideas {
-  width: 70%;
+form {
   margin: 0 auto;
+  max-width: 605px;
+}
+form input {
+  box-sizing: border-box;
+  border: 0.06em solid #d1d2d3;
+  font-size: 1.8rem;
+  margin: 0.3rem 0;
+  padding: 2px 5px;
+  width: 100%;
+  transition: all 0.1s linear;
+  color: #c4c5c7;
 }
 
-.search-ideas {
+input:focus {
+  outline: none;
+}
+
+form button {
+  box-sizing: border-box;
+  background-color: #00a79d;
+  color: white;
+  font-size: 1.7rem;
+  margin: 0.3rem 0;
+  padding: 4px px;
   width: 100%;
+}
+
+form button:hover {
+  background-color: #045e55;
+  cursor: pointer;
+}
+
+/*------------------BOTTOM HALF------------------*/
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+section input {
+  border: 1px solid #d1d2d3;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  max-width: 600px;
+  outline: 0;
+  padding: 5px;
+  width: 100%;
+}
+
+/*------------------IDEA CARD------------------*/
+
+ul {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-bottom: 2px solid #d1d2d3;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 600px;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul p {
+  display: inline-block;
+}
+
+.bottom-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+/*------------------IDEA BUTTONS------------------*/
+
+.idea-button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.delete-idea-button {
+  background: url(icons/delete.svg);
+  display: inline;
+}
+
+
+.delete-idea-button:hover {
+  background: url(icons/delete-hover.svg);
+}
+.upvote-idea-button {
+  background: url(icons/upvote.svg);
+}
+
+.upvote-idea-button:hover {
+  background: url(icons/upvote-hover.svg);
+}
+
+.downvote-idea-button {
+  background: url(icons/downvote.svg);
+}
+
+.downvote-idea-button:hover {
+  background: url(icons/downvote-hover.svg);
+}
+
+/*------------------MEDIA QUERIES------------------*/
+
+@media only screen and (max-width: 800px) {
+  .idea-body {
+    padding-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  form input,
+  form button,
+  section input,
+  ul {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h1{
+    font-size: 2.0rem;
+  }
 }
