@@ -1,3 +1,5 @@
+/*------------------SELECT ALL------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -8,6 +10,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+::placeholder {
+  color: #c3c4c6;
 }
 
 /*------------------TITLE SECTION------------------*/
@@ -65,7 +71,7 @@ form button {
   color: white;
   font-size: 1.7rem;
   margin: 0.3rem 0;
-  padding: 4px px;
+  padding: 5px;
   width: 100%;
 }
 
@@ -92,53 +98,66 @@ form button:hover {
   max-width: 600px;
   outline: 0;
   padding: 5px;
-  width: 100%;
+  width: 90%;
 }
 
 /*------------------IDEA CARD------------------*/
 
 ul {
+  border-bottom: 2px solid #d1d2d3;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  text-align: left;
-  border-bottom: 2px solid #d1d2d3;
-  width: 100%;
-  box-sizing: border-box;
-  max-width: 600px;
   list-style: none;
+  max-width: 600px;
   padding-left: 0;
+  padding-top: 0;
+  text-align: left;
+  width: 100%;
+}
+
+ul h2 {
+  color: #6d6e71;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 0;
 }
 
 ul p {
   display: inline-block;
+  color: #939598;
 }
 
 .bottom-wrapper {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
 
+.idea-content {
+  margin-bottom: 10px;
 }
 /*------------------IDEA BUTTONS------------------*/
 
 .idea-button {
-  cursor: pointer;
   border: 0;
+  cursor: pointer;
+  height: 1.5rem;
   outline: 0;
   width: 1.5rem;
-  height: 1.5rem;
 }
 .delete-idea-button {
   background: url(icons/delete.svg);
   display: inline;
+  top: 10px;
+  position: relative;
 }
-
 
 .delete-idea-button:hover {
   background: url(icons/delete-hover.svg);
 }
 .upvote-idea-button {
-  background: url(icons/upvote.svg);
+  background: url(icons/upvote.svg) no-repeat;
+  margin-right: 0.8rem;
 }
 
 .upvote-idea-button:hover {
@@ -146,11 +165,17 @@ ul p {
 }
 
 .downvote-idea-button {
-  background: url(icons/downvote.svg);
+  background: url(icons/downvote.svg) no-repeat;
+  margin-right: 0.8rem;
 }
 
 .downvote-idea-button:hover {
   background: url(icons/downvote-hover.svg);
+}
+
+.id-quality-rating {
+  position: relative;
+  bottom: 4px;
 }
 
 /*------------------MEDIA QUERIES------------------*/
@@ -165,13 +190,14 @@ ul p {
   form input,
   form button,
   section input,
+  .search-ideas,
   ul {
     width: 90%;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  h1{
-    font-size: 2.0rem;
+  h1 {
+    font-size: 2rem;
   }
 }
