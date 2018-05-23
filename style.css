@@ -112,10 +112,10 @@ ul p {
   display: inline-block;
 }
 
-li header{
+.bottom-wrapper{
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 
 }
 /*------------------IDEA BUTTONS------------------*/
