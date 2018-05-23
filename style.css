@@ -79,7 +79,7 @@ section {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
   text-align: center;
   width: 100%;
 }
@@ -93,18 +93,31 @@ section input {
   padding: 5px;
   width: 100%;
 }
+
 /*------------------IDEA CARD------------------*/
 
-li {
+ul {
   display: flex;
   flex-direction: column;
   text-align: left;
   border-bottom: 2px solid #d1d2d3;
   width: 100%;
+  box-sizing: border-box;
   max-width: 600px;
-  background-color: lightgrey;
+  list-style: none;
+  padding-left: 0;
 }
 
+ul p {
+  display: inline-block;
+}
+
+.bottom-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
 /*------------------IDEA BUTTONS------------------*/
 
 .idea-button {
@@ -116,7 +129,9 @@ li {
 }
 .delete-idea-button {
   background: url(icons/delete.svg);
+  display: inline;
 }
+
 
 .delete-idea-button:hover {
   background: url(icons/delete-hover.svg);
@@ -148,7 +163,14 @@ li {
 @media only screen and (max-width: 650px) {
   form input,
   form button,
-  section input {
+  section input,
+  ul {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h1{
+    font-size: 2.0rem;
   }
 }
