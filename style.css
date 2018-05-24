@@ -13,14 +13,14 @@ body {
 }
 
 ::placeholder {
-  color: #c3c4c6;
+  color: #C3C4C6;
 }
 
 /*------------------TITLE SECTION------------------*/
 
 .top-half {
   align-items: center;
-  background-color: #e5f3f2;
+  background-color: #E5F3F2;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -36,11 +36,11 @@ h1 {
 }
 
 .idea-header-text {
-  color: #00a79d;
+  color: #00A79D;
 }
 
 .box-header-text {
-  color: #6d6e71;
+  color: #6D6E71;
 }
 
 /*------------------INPUT FORM------------------*/
@@ -52,9 +52,9 @@ form {
 
 form input {
   box-sizing: border-box;
-  border: 0.06em solid #d1d2d3;
+  border: 0.06em solid #D1D2D3;
   font-size: 1.8rem;
-  color: #c4c5c7;
+  color: #C4C5C7;
   margin: 0.3rem 0;
   padding: 2px 5px;
   width: 100%;
@@ -67,7 +67,7 @@ input:focus {
 
 form button {
   box-sizing: border-box;
-  background-color: #00a79d;
+  background-color: #00A79D;
   color: white;
   font-size: 1.7rem;
   margin: 0.3rem 0;
@@ -76,7 +76,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #045e55;
+  background-color: #045E55;
   cursor: pointer;
 }
 
@@ -92,7 +92,7 @@ form button:hover {
 }
 
 .bottom-half input {
-  border: 1px solid #d1d2d3;
+  border: 1px solid #D1D2D3;
   box-sizing: border-box;
   font-size: 1.5rem;
   max-width: 600px;
@@ -104,7 +104,6 @@ form button:hover {
 /*------------------IDEA CARD------------------*/
 
 ul {
-  border-bottom: 2px solid #d1d2d3;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -116,12 +115,12 @@ ul {
   width: 100%;
 }
 
-li{
-  border-bottom: 1px solid #d1d2d3;
+li {
+  border-bottom: 1px solid #D1D2D3;
 }
 
 ul h2 {
-  color: #6d6e71;
+  color: #6D6E71;
   font-size: 1.5rem;
   font-family: "Roboto Slab", serif;
   margin: 15px 0;
@@ -144,6 +143,7 @@ ul p {
 .idea-content {
   margin-bottom: 10px;
 }
+
 /*------------------IDEA BUTTONS------------------*/
 
 .idea-button {
@@ -153,6 +153,7 @@ ul p {
   outline: 0;
   width: 1.5rem;
 }
+
 .delete-button {
   background: url(icons/delete.svg);
   display: inline;
@@ -163,6 +164,7 @@ ul p {
 .delete-button:hover {
   background: url(icons/delete-hover.svg);
 }
+
 .upvote-button {
   background: url(icons/upvote.svg) no-repeat;
   margin-right: 0.8rem;
@@ -189,12 +191,14 @@ ul p {
 /*------------------MEDIA QUERIES------------------*/
 
 @media only screen and (max-width: 800px) {
+  
   .idea-body {
     padding-bottom: 3rem;
   }
 }
 
 @media only screen and (max-width: 650px) {
+ 
   form input,
   form button,
   section input,
