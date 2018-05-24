@@ -121,17 +121,18 @@ li{
 }
 
 ul h2 {
-  font-size: 1.5rem;
   color: #6d6e71;
+  font-size: 1.5rem;
   font-family: "Roboto Slab", serif;
   margin: 20px 0;
 }
 
 ul p {
-  font-size: 1.2rem;
-  display: inline-block;
   color: #939598;
-  margin: 20px 0;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 25px;
+  margin: 10px 0;
 }
 
 .bottom-wrapper {
@@ -155,8 +156,8 @@ ul p {
 .delete-idea-button {
   background: url(icons/delete.svg);
   display: inline;
-  top: 10px;
   position: relative;
+  top: 10px;
 }
 
 .delete-idea-button:hover {
