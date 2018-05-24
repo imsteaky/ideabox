@@ -4,31 +4,33 @@ var saveButton = document.querySelector('.save-button');
 var ideaForm = document.querySelector('.idea-form');
 var ideaBox = document.querySelector('.idea-container');
 
-// titleInput.addEventListener('keyup', enableSaveButton);
-// bodyInput.addEventListener('keyup', enableSaveButton);
+
+titleInput.addEventListener('keyup', enableSaveButton);
+bodyInput.addEventListener('keyup', enableSaveButton);
 ideaForm.addEventListener('submit', createIdea);
+ideaBox.addEventListener('click', deleteIdea);
 window.onload = retrieveIdea();
 
-// function enableSaveButton() {
-//   if (titleInput.value === '' || bodyInput.value === '') {
-//     saveButton.prop('disabled', true);
-//   } else {
-//     saveButton.prop('disabled', false);
-//   }
-// };
+function enableSaveButton() {
+  if (titleInput.value === '' || bodyInput.value === '') {
+    saveButton.disabled = true;
+  } else {
+    saveButton.disabled = false;
+  }
+};
 
 function prependIdea(mostRecentIdea) {
   var newIdeaCard = document.createElement('li');
   newIdeaCard.innerHTML = `
-  <li class="idea-mockup">
+  <li class="idea-mockup" id="${mostRecentIdea.id}">
     <header class="bottom-wrapper">
       <h2 class="idea-card-title">${mostRecentIdea.title}</h2>
-      <button class="idea-button delete-idea-button" alt="the button for upvoting an idea"></button>
+      <button class="idea-button delete-button" alt="the button for upvoting an idea"></button>
     </header>
     <p class="idea-content">${mostRecentIdea.body}</p>
     <footer>
-      <button class="idea-button upvote-idea-button" alt="the button for upvoting an idea"></button>
-      <button class="idea-button downvote-idea-button" alt="the button for upvoting an idea"></button>
+      <button class="idea-button upvote-button" alt="the button for upvoting an idea"></button>
+      <button class="idea-button downvote-button" alt="the button for upvoting an idea"></button>
       <p class="id-quality-rating">${mostRecentIdea.quality}</p>
     </footer>
   </li>`;
@@ -63,3 +65,10 @@ function createIdea(event) {
   storeIdea(mostRecentIdea);
 };
 
+function deleteIdea(event) {
+  var uniqueId = event.target.parentNode.parentNode.id;
+  if (event.target.className === 'idea-button delete-button') {
+    event.target.closest('li').remove();
+    localStorage.removeItem(uniqueId);
+  }
+};
