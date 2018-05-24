@@ -3,34 +3,34 @@ var bodyInput = document.querySelector('.idea-body');
 var saveButton = document.querySelector('.save-button');
 var ideaForm = document.querySelector('.idea-form');
 var ideaBox = document.querySelector('.idea-container');
-var upVoteButton = document.querySelector('.upvote-idea-button')
-// titleInput.addEventListener('keyup', enableSaveButton);
-// bodyInput.addEventListener('keyup', enableSaveButton);
-ideaForm.addEventListener('submit', createIdea);
 
+titleInput.addEventListener('keyup', enableSaveButton);
+bodyInput.addEventListener('keyup', enableSaveButton);
+ideaForm.addEventListener('submit', createIdea);
+ideaBox.addEventListener('click', handleIdeaButtons);
 
 window.onload = retrieveIdea();
 
-// function enableSaveButton() {
-//   if (titleInput.value === '' || bodyInput.value === '') {
-//     saveButton.prop('disabled', true);
-//   } else {
-//     saveButton.prop('disabled', false);
-//   }
-// };
+function enableSaveButton() {
+  if (titleInput.value === '' || bodyInput.value === '') {
+    saveButton.disabled = true;
+  } else {
+    saveButton.disabled = false;
+  }
+};
 
 function prependIdea(mostRecentIdea) {
   var newIdeaCard = document.createElement('li');
   newIdeaCard.innerHTML = `
-  <li class="idea-mockup">
+  <li class="idea-mockup" id="${mostRecentIdea.id}">
     <header class="bottom-wrapper">
       <h2 class="idea-card-title">${mostRecentIdea.title}</h2>
-      <button class="idea-button delete-idea-button" alt="the button for upvoting an idea"></button>
+      <button class="idea-button delete-button" alt="the button for upvoting an idea"></button>
     </header>
     <p class="idea-content">${mostRecentIdea.body}</p>
     <footer>
-      <button class="idea-button upvote-idea-button" alt="the button for upvoting an idea"></button>
-      <button class="idea-button downvote-idea-button" alt="the button for upvoting an idea"></button>
+      <button class="idea-button upvote-button" alt="the button for upvoting an idea"></button>
+      <button class="idea-button downvote-button" alt="the button for upvoting an idea"></button>
       <p class="id-quality-rating">${mostRecentIdea.quality}</p>
     </footer>
   </li>`;
@@ -65,3 +65,24 @@ function createIdea(event) {
   storeIdea(mostRecentIdea);
 };
 
+function handleIdeaButtons(event) {
+  var uniqueId = event.target.parentNode.parentNode.id;
+  if (event.target.className === 'idea-button delete-button') {
+    event.target.closest('li').remove();
+    localStorage.removeItem(uniqueId);
+  }
+  if (event.target.className === 'idea-button upvote-button') {
+    if (event.target.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML === 'swill') {
+      event.target.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML = 'plausible';
+    } else {
+      event.target.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML = 'genius';
+    }
+  }
+  if (event.target.className === 'idea-button downvote-button') {
+    if (event.target.nextSibling.nextSibling.innerHTML === 'genius') {
+      event.target.nextSibling.nextSibling.innerHTML = 'plausible';
+    } else {
+      event.target.nextSibling.nextSibling.innerHTML = 'swill';
+    }
+  }
+};

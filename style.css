@@ -153,31 +153,31 @@ ul p {
   outline: 0;
   width: 1.5rem;
 }
-.delete-idea-button {
+.delete-button {
   background: url(icons/delete.svg);
   display: inline;
   position: relative;
   top: 10px;
 }
 
-.delete-idea-button:hover {
+.delete-button:hover {
   background: url(icons/delete-hover.svg);
 }
-.upvote-idea-button {
+.upvote-button {
   background: url(icons/upvote.svg) no-repeat;
   margin-right: 0.8rem;
 }
 
-.upvote-idea-button:hover {
+.upvote-button:hover {
   background: url(icons/upvote-hover.svg);
 }
 
-.downvote-idea-button {
+.downvote-button {
   background: url(icons/downvote.svg) no-repeat;
   margin-right: 0.8rem;
 }
 
-.downvote-idea-button:hover {
+.downvote-button:hover {
   background: url(icons/downvote-hover.svg);
 }
 
