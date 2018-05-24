@@ -3,10 +3,11 @@ var bodyInput = document.querySelector('.idea-body');
 var saveButton = document.querySelector('.save-button');
 var ideaForm = document.querySelector('.idea-form');
 var ideaBox = document.querySelector('.idea-container');
-
+var upVoteButton = document.querySelector('.upvote-idea-button')
 // titleInput.addEventListener('keyup', enableSaveButton);
 // bodyInput.addEventListener('keyup', enableSaveButton);
 ideaForm.addEventListener('submit', createIdea);
+
 window.onload = retrieveIdea();
 
 // function enableSaveButton() {
@@ -62,4 +63,3 @@ function createIdea(event) {
   prependIdea(mostRecentIdea);
   storeIdea(mostRecentIdea);
 };
-

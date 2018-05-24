@@ -111,20 +111,27 @@ ul {
   list-style: none;
   max-width: 600px;
   padding-left: 0;
-  padding-top: 0;
+  padding-top: 20px;
   text-align: left;
   width: 100%;
 }
 
+li{
+  border-bottom: 1px solid #d1d2d3;
+}
+
 ul h2 {
+  font-size: 1.5rem;
   color: #6d6e71;
   font-family: "Roboto Slab", serif;
-  margin-bottom: 0;
+  margin: 20px 0;
 }
 
 ul p {
+  font-size: 1.2rem;
   display: inline-block;
   color: #939598;
+  margin: 20px 0;
 }
 
 .bottom-wrapper {
