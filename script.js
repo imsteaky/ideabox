@@ -8,6 +8,7 @@ var upVoteButton = document.querySelector('.upvote-idea-button')
 // bodyInput.addEventListener('keyup', enableSaveButton);
 ideaForm.addEventListener('submit', createIdea);
 
+
 window.onload = retrieveIdea();
 
 // function enableSaveButton() {
@@ -63,3 +64,4 @@ function createIdea(event) {
   prependIdea(mostRecentIdea);
   storeIdea(mostRecentIdea);
 };
+
