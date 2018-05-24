@@ -4,11 +4,11 @@ var saveButton = document.querySelector('.save-button');
 var ideaForm = document.querySelector('.idea-form');
 var ideaBox = document.querySelector('.idea-container');
 
-
 titleInput.addEventListener('keyup', enableSaveButton);
 bodyInput.addEventListener('keyup', enableSaveButton);
 ideaForm.addEventListener('submit', createIdea);
 ideaBox.addEventListener('click', handleIdeaButtons);
+
 window.onload = retrieveIdea();
 
 function enableSaveButton() {
