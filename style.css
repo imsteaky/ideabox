@@ -54,11 +54,11 @@ form input {
   box-sizing: border-box;
   border: 0.06em solid #d1d2d3;
   font-size: 1.8rem;
+  color: #c4c5c7;
   margin: 0.3rem 0;
   padding: 2px 5px;
   width: 100%;
   transition: all 0.1s linear;
-  color: #c4c5c7;
 }
 
 input:focus {
@@ -124,7 +124,7 @@ ul h2 {
   color: #6d6e71;
   font-size: 1.5rem;
   font-family: "Roboto Slab", serif;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 ul p {
