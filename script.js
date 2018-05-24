@@ -8,7 +8,6 @@ titleInput.addEventListener('keyup', enableSaveButton);
 bodyInput.addEventListener('keyup', enableSaveButton);
 ideaForm.addEventListener('submit', createIdea);
 ideaBox.addEventListener('click', handleIdeaButtons);
-
 window.onload = retrieveIdea();
 
 function enableSaveButton() {
@@ -17,6 +16,22 @@ function enableSaveButton() {
   } else {
     saveButton.disabled = false;
   }
+};
+
+function IdeaGenerator(title, body, quality, id) {
+  this.title = title;
+  this.body = body;
+  this.quality = quality || 'swill';
+  this.id = Date.now();
+}; 
+
+function createIdea(event) {
+  event.preventDefault();
+  var titleValue = titleInput.value;
+  var bodyValue = bodyInput.value;
+  var mostRecentIdea = new IdeaGenerator(titleValue, bodyValue);
+  prependIdea(mostRecentIdea);
+  storeIdea(mostRecentIdea);
 };
 
 function prependIdea(mostRecentIdea) {
@@ -47,22 +62,6 @@ function retrieveIdea() {
     var parsedIdea = JSON.parse(localStorage.getItem(localStorage.key(i)));
     prependIdea(parsedIdea);
   }
-};
-
-function IdeaGenerator(title, body, quality, id) {
-  this.title = title;
-  this.body = body;
-  this.quality = quality || 'swill';
-  this.id = Date.now();
-}; 
-
-function createIdea(event) {
-  event.preventDefault();
-  var titleValue = titleInput.value;
-  var bodyValue = bodyInput.value;
-  var mostRecentIdea = new IdeaGenerator(titleValue, bodyValue);
-  prependIdea(mostRecentIdea);
-  storeIdea(mostRecentIdea);
 };
 
 function handleIdeaButtons(event) {
