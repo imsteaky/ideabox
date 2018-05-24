@@ -18,10 +18,10 @@ function enableSaveButton() {
   }
 };
 
-function IdeaGenerator(title, body, quality, id) {
+function IdeaGenerator(title, body) {
   this.title = title;
   this.body = body;
-  this.quality = quality || 'swill';
+  this.quality = 'swill';
   this.id = Date.now();
 }; 
 
